@@ -1,0 +1,120 @@
+*{
+	margin:0;
+	padding:0;
+	border: 0;
+}
+ul,li{
+	list-style: none;
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+html{
+	height:100%;
+}
+body{
+	height:100%;
+	margin:0px;
+	padding:0px;
+	font-family:"微软雅黑";
+	overflow-x: hidden;     
+}
+
+.h100{
+	height: 100%;
+}
+
+.mtop{
+	margin-top: 80px;
+	margin-right: 30px;
+}
+
+.btn-self{
+	width: 100%;
+	border-radius: 0px;
+}
+
+table{
+	text-align: center;
+}
+
+th{
+	text-align: center;
+}
+
+.phead{
+	font-size: 18px;
+	text-align: center;
+}
+
+.ntop{
+	margin-top: 30px;
+	margin-right: 30px;
+}
+
+.w100{
+	width: 100%;
+	text-align: center;
+}
+
+.pdh{
+	padding-top: 60px;
+}
+
+.tx{
+	width: 100%;
+	padding-top: 30%;
+	border-radius:50%;
+}
+
+.column { 
+	width: 100%; 
+	float: left; 
+}
+
+.portlet { 
+	margin: 0 1em 1em 0; 
+}
+
+.portlet-header { 
+	margin: 0.3em; 
+	line-height:2em;
+	padding-left: 0.2em; 
+}
+
+.portlet-header .ui-icon { 
+	float: right; 
+}
+.portlet-content { 
+	padding: 0.4em; 
+}
+.ui-sortable-placeholder {
+	border: 1px dotted black; 
+	visibility: visible !important; 
+	height: 50px !important; 
+}
+.ui-sortable-placeholder * { 
+	visibility: hidden; 
+}
+
+.copyright {
+    font-size: 12px;
+    color: #666666;
+    width: 990px;
+    position: relative;
+    left: 50%;
+    margin-left: -495px;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.column{
+	min-height: 50px;
+}
+
+.w33{
+	width: 33%;
+	text-align: center;
+}

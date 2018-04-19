@@ -1,0 +1,11 @@
+.logo{
+	height: 40px;
+	position: relative;
+	top: -5px;
+}
+.navbarClear{
+	position: relative;
+	margin: 0px;
+	visibility:hidden;
+}
+

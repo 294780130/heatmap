@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>热力图</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/map.css" rel="stylesheet">
+    <link type="text/css" href="css/nav.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet"  type="text/css">
+    <link type="text/css" href="css/index.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/ht ml5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.9.1.js"></script>
+    <script language="javascript" type="text/javascript" src="js/holder.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="index.html">
+              <img class="logo" src="img/logo.png" alt="Map My Customers logo">
+          </a>
+          
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+            <li class="hidden-sm hidden-md"><a href="stu_all.html" >校园学生来源地</a></li>
+            <li><a href="stu_college.html">学院学生来源地</a></li>
+            <li><a href="stu_grade.html">年级学生来源地变化情况</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+            <li><a href="about.html">关于</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--nav结束-->
+
+    <div id="navbar">
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#1">标题</a></li>
+            <li><a href="#2">功能图</a></li>
+            <li><a href="#3">可视化</a></li>
+            <li><a href="#4">功能1</a></li>
+            <li><a href="#5">功能2</a></li>
+            <li><a href="#6">功能3</a></li>
+            <li><a href="#7">功能4</a></li>
+        </ul>
+    </div>
+
+    <div class="jumbotron jm" id="1">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-xs-11">
+            <h1 class="jumbo-header">Changing life with data visualization.</h1>
+            <p>Increased revenue, efficiency, and accountability – guaranteed.</p>
+            <p><a class="btn btn-primary btn-lg mar" href="stu_all.html" role="button">查看Demo</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="2">
+      <div class="row">
+          <div class="col-sm-12 col-xs-11">
+            <div class="img">
+              <img class="header-img" src="img/big_pic.jpg">
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--轮播图-->
+    <!--<div class="container" id="3">-->
+    <div id="3">
+      <div class="row">
+        <div class="col-md-12 col-xs-11">
+          <div id="box" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                  <img src="img/1.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="img/2.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="img/3.jpg" alt="">
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(function(){
+        $('.carousel').carousel({ 
+          interval:4000
+        });
+        $("#box a.left").click(function(){
+          $('.carousel').carousel("prev");
+        })
+        $("#box a.right").click(function(){
+          $('.carousel').carousel("next");
+        })
+      }); 
+      $(function(){
+        $("body").scrollspy({
+          offset:1
+        });
+        $("body").on("activate.bs.scrollspy",function(e){
+          if(e.target && $(e.target).hasClass("dropdown")){
+            $(e.target).children("ul.dropdown-menu").css("display","block");
+          }
+          else{ 
+            $(e.target).parent().find("ul.dropdown-menu").css("display","none");
+          }
+        }); 
+      })
+    </script>
+
+    <!--底部功能介绍部分-->
+    <section class="section sec_box" id="4">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <div class="feat-description">
+                        <br><br><br><br><br>
+                        <h2 style="color:#496174;">校园新生归属地数据可视化显示</h2>
+                        <p class="text-muted"> &nbsp; &nbsp; &nbsp; &nbsp;本网站以ZJUT-2017级新生数据作为数据基础，统计得到来自不同省市区同学的数量，利用<strong>热力图</strong>这一新兴技术，打到数据可视化的目的，让数据不再是冷冰冰的数字或是表格，让读者可以一眼就对整个数据有一个相对直观的体会，这是数据可视化的最根本意义。</p>
+                        <a href="stu_all.html" class="btn btn-success pull-right">demo>></a>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <img src="img/pic1.jpg" alt="iPhone showing the color-coding feature on Map My Customers app" width="100%">
+                </div>
+            </div><!-- end row -->
+        </div> <!-- end container -->
+    </section>
+    <section class="section sec2" id="5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <img src="img/pic3.png" alt="sales territory mapping" width="100%">
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <div class="feat-description">
+                        <br><br><br>
+                        <h2 style="color:#496174;">分学院新生归属地数据统计显示</h2>
+                        <p class="text-muted"> &nbsp; &nbsp; &nbsp; &nbsp;在以上功能的基础上，我们进行了功能的细化，为了应对显示生活中各种各样的需求，我们提供一个分学院数据可视化显示和一些具体数据的统计结果显示。<br><br><a href="stu_college.html" class="btn btn-success pull-right">demo>></a></p>
+                    </div>
+                </div>
+            </div><!-- end row -->
+        </div> <!-- end container -->
+    </section>
+    <section class="section sec_box" id="6">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <div class="feat-description">
+                        <br><br><br><br><br>
+                        <h2 style="color:#496174;">分年级新生归属地数据统计显示</h2>
+                        <p class="text-muted"> &nbsp; &nbsp; &nbsp; &nbsp;在每年新生数据的更新后，新生的数据可以不断地录入和更新，用越来越多的数据，让整个网站的数据和功能可以建设得越来越丰富。</p><br>
+                        <a href="stu_grade.html" class="btn btn-success pull-right">demo>></a>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <img src="img/pic2.jpg" alt="iPhone showing the color-coding feature on Map My Customers app" width="100%">
+                </div>
+            </div><!-- end row -->
+        </div> <!-- end container -->
+    </section>
+    <section class="section sec2" id="7">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <img src="img/pic4.jpg" alt="sales territory mapping" width="100%">
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-5 col-xs-11">
+                    <div class="feat-description">
+                        <br><br><br>
+                        <h2 style="color:#496174;">多届学生生源地情况对比及预测</h2>
+                        <p class="text-muted"> &nbsp; &nbsp; &nbsp; &nbsp;在有多届学生学生生源地数据之后，我们可以根据这几届学生生源地来源情况进行数据分析，一方面可以对于已有数据进行一个线性变化的分析，另一方面可以根据已有数据对未来数据进行预测，以满足校园对于学生管理方面的需求。<strong><a  href="javascript:void(0)">此项正在研发中......</a></strong></p>
+                    </div>
+                </div>
+            </div><!-- end row -->
+        </div> <!-- end container -->
+    </section>
+
+    <!--详细介绍部分结束，下面是footer-->
+    <div class="container">
+      <footer>
+          <div class="row">
+            <div class="col-md-3 col-xs-12">
+              <div class="span3">
+                  <h4>如何使用</h4>
+                  <ul>
+                      <li><a href="about.html">帮助</a></li>
+                      <li><a href="about.html">数据</a></li>
+                      <li><a href="about.html">说明</a></li>
+                      <li><a href="about.html">关于</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+              <div class="span3">
+                  <h4>浙江工业大学</h4>
+                  <ul>
+                      <li><a href="http://www.zjut.edu.cn/">校园官网</a></li>
+                      <li><a href="http://www.yxxt.zjut.edu.cn/">迎新系统</a></li>
+                      <li><a href="http://www.szyx.zjut.edu.cn/">数字迎新</a></li>
+                      <li><a href="http://www.jh.zjut.edu.cn/">精弘网络</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+              <div class="span3">
+                  <h4>关于我们</h4>
+                  <ul>
+                      <li><a href="about.html">开发人员</a></li>
+                      <li><a href="about.html">开发过程</a></li>
+                      <li><a href="about.html">项目细节</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+              <div class="span3">
+                  <h4>使用的技术</h4>
+                  <ul>
+                      <li><a href="http://www.bootcss.com/">Bootstrap</a></li>
+                      <li><a href="https://www.javascript.com/">JavaScript</a></li>
+                      <li><a href="https://jquery.com/">jQuery</a></li>
+                      <li><a href="https://www.patrick-wied.at/static/heatmapjs/">heatmap.js</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        <div class="copyright"> Copyright &copy; 2018 zhqtest.cn, all rights reserved.<br> 浙ICP备16013832号 </div>
+      </footer>
+    </div>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

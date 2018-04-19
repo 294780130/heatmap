@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>热力图</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="jqueryui/jquery-ui.css" rel="stylesheet">
+	<!--jQuery UI组件结构-->
+	<script src="jqueryui/external/jquery/jquery.js"></script>
+	<script src="jqueryui/jquery-ui.js"></script>
+
+
+    <link type="text/css" href="css/map.css" rel="stylesheet">
+    <link type="text/css" href="css/nav.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="index.html">
+              <img class="logo" src="img/logo.png" alt="Map My Customers logo">
+          </a>
+          
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+            <li class="hidden-sm hidden-md"><a href="stu_all.html" >校园学生来源地</a></li>
+            <li><a href="stu_college.html">学院学生来源地</a></li>
+            <li><a href="stu_grade.html">年级学生来源地变化情况</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+            <li><a href="about.html">关于</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--nav结束，下面进行项目参与者介绍页面-->
+	<div class="well">
+	    <div class="container">
+	    	<div class="row pdh">
+	    		<div class="col-md-6 col-xs-12">
+	    			<div class="panel panel-success">
+	    				<div class="panel-heading">项目成员-郑浩琦</div>
+	    				<div class="panel-body">
+	    					<div class="row">
+	    						<div class="col-md-3 col-xs-3"><img class="tx" src="img/zhq.jpg" alt=""></div>
+	    						<div class="col-md-9 col-xs-9">
+	    							<div class="h3"><small>个人简介</small></div>
+	    							<div class="table-responsive">
+	    								<table class="table text-muted">
+	    									<tr>
+	    										<th scope="row">学校</th>
+	    										<td>浙江工业大学</td>
+	    										<th scope="row">学院</th>
+	    										<td>计算机学院</td>
+	    									</tr>
+	    									<tr>
+	    										<th scope="row">专业</th>
+	    										<td>软件工程专业</td>
+	    										<th scope="row">班级</th>
+	    										<td>软工1504班</td>
+	    									</tr>
+	    									<tr>
+	    										<th scope="row">学号</th>
+	    										<td>201526811329</td>
+	    										<th scope="row">邮箱</th>
+	    										<td><small>harveyzhq@vip.qq.com</small></td>
+	    									</tr>
+	    								</table>
+    								</div>
+	    						</div>
+	    					</div>	
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="col-md-6 col-xs-12">
+	    			<div class="panel panel-warning">
+	    				<div class="panel-heading">项目成员-杨健聪</div>
+	    				<div class="panel-body">
+	    					<div class="row">
+	    						<div class="col-md-3 col-xs-3"><img class="tx" src="img/yjc.jpg" alt=""></div>
+	    						<div class="col-md-9 col-xs-9">
+	    							<div class="h3"><small>个人简介</small></div>
+	    							<div class="table-responsive">
+	    								<table class="table text-muted">
+	    									<tr>
+	    										<th scope="row">学校</th>
+	    										<td>浙江工业大学</td>
+	    										<th scope="row">学院</th>
+	    										<td>计算机学院</td>
+	    									</tr>
+	    									<tr>
+	    										<th scope="row">专业</th>
+	    										<td>软件工程专业</td>
+	    										<th scope="row">班级</th>
+	    										<td>软工1504班</td>
+	    									</tr>
+	    									<tr>
+	    										<th scope="row">学号</th>
+	    										<td>201526811324</td>
+	    										<th scope="row">邮箱</th>
+	    										<td><small>yrobot@qq.com</small></td>
+	    									</tr>
+	    								</table>
+	    							</div>
+	    						</div>
+	    					</div>	
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading text-center"><strong>项目进展情况<strong></div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-4 col-xs-12">
+						<div class="column">
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第1周</div>
+						        <div class="portlet-content">● 项目初步构想<br>● 项目计划书填写<br>● 服务器域名购买<br>● 服务器域名备案申请</div>
+						    </div>
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第4周</div>
+						        <div class="portlet-content">● 网站前端设计<br>● 网站前端页面初步搭建<br>● 网站前端响应式布局研究<br>● 热力图动态加载研究</div>
+						    </div>
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第7周</div>
+						        <div class="portlet-content">● 分学院数据统计<br>● 分学院生成json数据<br>● 热力图显示优化<br>● 分学院页面功能完成</div>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<div class="column">
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第2周</div>
+						        <div class="portlet-content">● 2017级新生数据采集<br>● 热力图制作需要的数据生成<br>● 百度API资格申请<br>● heatmap初步学习</div>
+						    </div>
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第5周</div>
+						        <div class="portlet-content">● 网站前端首页的实现<br>● 网站响应式布局优化<br>● 网站移动端访问测试<br>● 地图动态加载完成</div>
+						    </div>
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第8周</div>
+						        <div class="portlet-content">内容待添加</div>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<div class="column">
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第3周</div>
+						        <div class="portlet-content">● 经纬度数据整合<br>● 浙江省经纬度细分到区<br>● 热力图demo初步实现<br>● heatmap调控的进阶学习</div>
+						    </div>
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第6周</div>
+						        <div class="portlet-content">● 网站关于页面和地图页面<br>● 地图页面指针动态效果<br>● 网站关于页面的响应式布局<br>● 地图页面的可视化效果优化</div>
+						    </div>
+						    <div class="portlet">
+						        <div class="portlet-header text-center">项目第9周</div>
+						        <div class="portlet-content">内容待添加</div>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" >
+		$(function() {
+			$( ".column" ).sortable({
+				connectWith: ".column"
+			});
+
+			$( ".portlet" ).addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+				.find( ".portlet-header" )
+					.addClass( "ui-widget-header ui-corner-all" )
+					.prepend( "<span class='ui-icon ui-icon-minusthick'></span>")
+					.end()
+				.find( ".portlet-content" );
+
+			$( ".portlet-header .ui-icon" ).click(function() {
+				$( this ).toggleClass( "ui-icon-minusthick" ).toggleClass( "ui-icon-plusthick" );
+				$( this ).parents( ".portlet:first" ).find( ".portlet-content" ).toggle();
+			});
+
+			$( ".column" ).disableSelection();
+		});
+	</script>
+	<div class="container">
+      <footer>
+          <div class="copyright"> Copyright &copy; 2018 zhqtest.cn, all rights reserved. 浙ICP备16013832号 </div>
+      </footer>
+    </div>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
